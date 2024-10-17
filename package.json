@@ -1,0 +1,22 @@
+{
+  "name": "critters-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "ts-node server/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.3.0",
+    "@types/socket.io": "^3.0.2",
+    "socket.io": "^4.8.0"
+  }
+}
