@@ -14,6 +14,7 @@ export interface CardCost {
 }
 
 export interface IGameCardBase {
+  id?: string;
   name: CardNames;
   cost: CardCost;
   type: CardType;

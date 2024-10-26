@@ -9,7 +9,7 @@ export const cardLookup: TCardLookup = {
     },
     name: CardNames.AppleTree,
     type: CardType.Item,
-    image: "/images/carrot_grower.png",
+    image: "/images/apple_tree.png",
     description: "Gain 1 Apple.",
   },
   [CardNames.CarrotPatch]: {
@@ -20,7 +20,7 @@ export const cardLookup: TCardLookup = {
     },
     name: CardNames.CarrotPatch,
     type: CardType.Item,
-    image: "/images/carrot_grower.png",
+    image: "/images/carrot_patch.png",
     description: "Gain 1 Carrot.",
   },
   [CardNames.BerryBush]: {
@@ -31,7 +31,7 @@ export const cardLookup: TCardLookup = {
     },
     name: CardNames.BerryBush,
     type: CardType.Item,
-    image: "/images/carrot_grower.png",
+    image: "/images/berry_bush.png",
     description: "Gain 1 Berry.",
   },
   [CardNames.FriendshipCharm]: {
@@ -42,7 +42,7 @@ export const cardLookup: TCardLookup = {
     },
     name: CardNames.FriendshipCharm,
     type: CardType.Item,
-    image: "/images/carrot_grower.png",
+    image: "/images/friendship_charm.png",
     description: "Get a favour from the shop for free.",
   },
   [CardNames.PickOfTheCrop]: {
@@ -53,7 +53,7 @@ export const cardLookup: TCardLookup = {
     },
     name: CardNames.PickOfTheCrop,
     type: CardType.Item,
-    image: "/images/carrot_grower.png",
+    image: "/images/pick_of_the_crop.png",
     description: "Gain 2 random crops.",
   },
 

@@ -20,6 +20,7 @@ export interface IGamePlayer {
   cardsInDeck: IGameCard[];
   cardsInDiscard: IGameCard[];
   crops: Record<CROP, number>;
+  targetCardId?: string;
 }
 
 export enum GameMode {

@@ -1,6 +1,9 @@
 import { CardNames, IGameCard } from "../models/cards.models";
 import { cardLookup } from "./cardLookup";
 import { shuffleCards } from "./shuffleCards";
+// import uuid from "uuid";
+
+const uuid = require("uuid");
 
 const shopDeckCards: CardNames[] = [
   //items
@@ -33,5 +36,14 @@ const shopDeckCards: CardNames[] = [
 ];
 
 export const createShopDeck = (): IGameCard[] => {
-  return shuffleCards(shopDeckCards.map((cardName) => cardLookup[cardName]));
+  return shuffleCards(
+    shopDeckCards.map((cardName) => {
+      const card = cardLookup[cardName];
+
+      return {
+        ...card,
+        id: uuid.v4(),
+      };
+    })
+  );
 };

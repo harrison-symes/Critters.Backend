@@ -4,7 +4,7 @@ import { getRoomStore } from "./gameRooms";
 import { generateRoomCode } from "./helpers/room.helpers";
 import { IGameRoom } from "./models/rooms.models";
 import io from "./sockets";
-import { startGame } from "./actions/game.actions";
+import { startGame, targetCard } from "./actions/game.actions";
 
 // const app = express();
 const userSockets: {
@@ -126,6 +126,19 @@ io.on("connection", (socket) => {
     const preGameSettings = store.getState().preGame;
 
     store.dispatch(startGame(preGameSettings));
+  });
+
+  socket.on("TargetCard", (cardId) => {
+    const roomCode = getRoomCodeForSocketId(socket.id);
+
+    const store = getRoomStore(roomCode);
+
+    store.dispatch(
+      targetCard({
+        cardId,
+        playerId: socket.id,
+      })
+    );
   });
 });
 

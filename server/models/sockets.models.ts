@@ -22,6 +22,7 @@ export interface ClientToServerEvents {
   EndTurn: () => void;
   DrawCards: (cardCount: number) => void;
   PlayCard: (card: IGameCard) => void;
+  TargetCard: (cardId: string | undefined) => void;
 }
 
 export interface InterServerEvents {

@@ -2,6 +2,8 @@ import { CardNames, IGameCard } from "../models/cards.models";
 import { cardLookup } from "./cardLookup";
 import { shuffleCards } from "./shuffleCards";
 
+const uuid = require("uuid");
+
 const starterDeckCards: CardNames[] = [
   CardNames.AppleTree,
   CardNames.AppleTree,
@@ -18,5 +20,14 @@ const starterDeckCards: CardNames[] = [
 ];
 
 export const createStarterDeck = (): IGameCard[] => {
-  return shuffleCards(starterDeckCards.map((cardName) => cardLookup[cardName]));
+  return shuffleCards(
+    starterDeckCards.map((cardName) => {
+      const card = cardLookup[cardName];
+
+      return {
+        ...card,
+        id: uuid.v4(),
+      };
+    })
+  );
 };
